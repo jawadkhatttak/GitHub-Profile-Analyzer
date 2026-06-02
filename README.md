@@ -25,4 +25,4 @@ and a computed developer personality badge.
 HTML · CSS · Vanilla JavaScript · Chart.js · GitHub REST API
 
 ## Live Demo
-[link here]
+[link here](https://jawadkhatttak.github.io/GitHub-Profile-Analyzer/)
