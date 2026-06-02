@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- SEARCH SECTION -->
+        <div class="search-box">
+            <h1>GitHub Profile Analyzer</h1>
+            <div class="input-row">
+                <input type="text" id="username-input" placeholder="Enter GitHub username..." />
+                <button id="search-btn">Analyze</button>
+            </div>
+            <p id="cache-indicator" class="cache-note hidden">⚡ Served from cache</p>
+            <p id="error-msg" class="error hidden"></p>
+        </div>
+
+        <!-- RESULTS SECTION  -->
+        <div id="results" class="hidden">
+
+            <!-- PROFILE CARD -->
+            <div class="profile-card">
+                <img id="avatar" src="" alt="Avatar" />
+                <div class="profile-info">
+                    <h2 id="profile-name"></h2>
+                    <p id="profile-bio"></p>
+                    <div class="stats-row">
+                        <div class="stat">
+                            <span id="stat-repos"></span>
+                            <label>Repos</label>
+                        </div>
+                        <div class="stat">
+                            <span id="stat-followers"></span>
+                            <label>Followers</label>
+                        </div>
+                        <div class="stat">
+                            <span id="stat-following"></span>
+                            <label>Following</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHARTS SECTION -->
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>Language Breakdown</h3>
+                    <canvas id="lang-chart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Top Starred Repos</h3>
+                    <canvas id="stars-chart"></canvas>
+                </div>
+            </div>
+
+            <!-- PERSONALITY BADGE -->
+            <div class="personality-card">
+                <h3>Developer Personality</h3>
+                <p id="personality-result"></p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
